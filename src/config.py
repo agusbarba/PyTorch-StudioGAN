@@ -366,8 +366,10 @@ class Configurations(object):
             setattr(self.super_cfgs[super], attr, value)
 
     def _overwrite_cfgs(self, cfg_file):
+        print(cfg_file)
         with open(cfg_file, 'r') as f:
             yaml_cfg = yaml.load(f, Loader=yaml.FullLoader)
+            print(yaml_cfg)
             for super_cfg_name, attr_value in yaml_cfg.items():
                 for attr, value in attr_value.items():
                     if hasattr(self.super_cfgs[super_cfg_name], attr):
