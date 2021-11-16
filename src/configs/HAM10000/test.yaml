@@ -1,6 +1,6 @@
 DATA:
   name: "Ham10000"
-  img_size: 256
+  img_size: 128
   num_classes: 7
 MODEL:
   g_cond_mtd: "cBN"
